@@ -47,7 +47,8 @@ jobs: # a collection of steps
     steps:
       - checkout
       - heroku/install
+      - run: touch favicon.ico
+          force: true
       - heroku/deploy-via-git:
           app-name: $HEROKU_APP_NAME
-          run: touch favicon.ico
           force: true
