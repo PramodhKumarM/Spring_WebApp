@@ -44,7 +44,6 @@ jobs: # a collection of steps
           path: target/com.edurekademo.tutorial.addressbook.war
           
   deploy_stage:
-    pre-deploy: touch favicon.ico 
     executor: heroku/default
     steps:
       - checkout
